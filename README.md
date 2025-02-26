@@ -1,8 +1,17 @@
-# Laravel 10 將 MJML 轉換成 HTML
+# Laravel 11 將 MJML 轉換成 HTML
 
-引入 spatie 的 laravel-settings 套件來擴增將 MJML 轉換成 HTML，MJML 是一套由電子報服務商 MailJet 貢獻出來的開源框架，能用簡單的語法輕鬆撰寫回應式設計（RWD）的電子郵件內容。
+引入 spatie 的 mjml-php 套件來擴增將 MJML 轉換成 HTML，MJML 是一套由電子報服務商 MailJet 貢獻出來的開源框架，能用簡單的語法輕鬆撰寫回應式設計（RWD）的電子郵件內容。
 
 ## 使用方式
+> 以下兩步驟擇一，需要 Node.js 版本 16.x 或更高版本。
+- （前提：如果伺服器安裝 npm 套件管理工具）執行 __npm__ 指令的 __install__ 來執行 MJML 安裝。
+```sh
+$ npm install mjml
+```
+- （前提：如果伺服器安裝 Yarn 套件管理工具）執行 __yarn__ 指令的 __add__ 來執行 MJML 安裝。
+```sh
+$ yarn add mjml
+```
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
 ```sh
 $ git clone
@@ -16,15 +25,6 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-> 以下兩步驟擇一，需要 Node.js 版本 16.x 或更高版本。
-- （前提：如果伺服器安裝 npm 套件管理工具）執行 __npm__ 指令的 __install__ 來執行 MJML 安裝。
-```sh
-$ npm install mjml
-```
-- （前提：如果伺服器安裝 Yarn 套件管理工具）執行 __yarn__ 指令的 __add__ 來執行 MJML 安裝。
-```sh
-$ yarn add mjml
-```
 - 執行 __Artisan__ 指令的 __storage:link__ 來建立連結符號，讓公用可存取的檔案維持在一個目錄中。
 ```sh
 $ php artisan storage:link
@@ -35,5 +35,5 @@ $ php artisan storage:link
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/eV75Bhf.png)
+![](https://i.imgur.com/67cSbtx.png)
 > 必須同時考慮各種郵件軟體（如 Microsoft Outlook）、及各家線上郵件平台（如 Google Gmail、Yahoo 奇摩電子信箱）的呈現，加上郵件平台及軟體對 CSS 的支援性較差、又或者會強制剝除我們的 CSS 設定，因此在回應式的電子郵件在設計上往往限制更多
