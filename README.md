@@ -1,4 +1,4 @@
-# Laravel 11 將 MJML 轉換成 HTML
+# Laravel 12 將 MJML 轉換成 HTML
 
 引入 spatie 的 mjml-php 套件來擴增將 MJML 轉換成 HTML，MJML 是一套由電子報服務商 MailJet 貢獻出來的開源框架，能用簡單的語法輕鬆撰寫回應式設計（RWD）的電子郵件內容。
 
@@ -25,6 +25,10 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 執行 __Artisan__ 指令的 __storage:link__ 來建立連結符號，讓公用可存取的檔案維持在一個目錄中。
 ```sh
 $ php artisan storage:link
@@ -35,5 +39,5 @@ $ php artisan storage:link
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/67cSbtx.png)
+![](https://i.imgur.com/96oSpm7.png)
 > 必須同時考慮各種郵件軟體（如 Microsoft Outlook）、及各家線上郵件平台（如 Google Gmail、Yahoo 奇摩電子信箱）的呈現，加上郵件平台及軟體對 CSS 的支援性較差、又或者會強制剝除我們的 CSS 設定，因此在回應式的電子郵件在設計上往往限制更多
